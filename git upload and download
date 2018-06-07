@@ -1,0 +1,162 @@
+Setting up liberror-perl (0.17025-1) ...
+Processing triggers for man-db (2.8.3-2) ...
+Setting up git (1:2.17.1-1ubuntu0.1) ...
+zenyi@zenyi-VirtualBox:~$ cd Desktop/git/
+zenyi@zenyi-VirtualBox:~/Desktop/git$ ls
+index.html  scripts.js  style.css
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git init
+Initialized empty Git repository in /home/zenyi/Desktop/git/.git/
+zenyi@zenyi-VirtualBox:~/Desktop/git$ ls
+index.html  scripts.js  style.css
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+	scripts.js
+	style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git add index.html
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	scripts.js
+	style.css
+
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git add *
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+	new file:   scripts.js
+	new file:   style.css
+
+zenyi@zenyi-VirtualBox:~/Desktop/git$ clear
+
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+	new file:   scripts.js
+	new file:   style.css
+
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'zenyi@zenyi-VirtualBox.(none)')
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git config --global user.email "zenyigom@hotmail.com"
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git config --global user.name "ZenyiGomez"
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+	new file:   scripts.js
+	new file:   style.css
+
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git commit -m "first commit"
+[master (root-commit) 41e92d8] first commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 scripts.js
+ create mode 100644 style.css
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+nothing to commit, working tree clean
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git remote add origin https://github.com/Zenyi1/first_git.git
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git push origin master
+Username for 'https://github.com': Zenyi1
+Password for 'https://Zenyi1@github.com': 
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 240 bytes | 240.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Zenyi1/first_git.git
+ * [new branch]      master -> master
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Zenyi1/first_git
+ * branch            master     -> FETCH_HEAD
+   41e92d8..f3e3df3  master     -> origin/master
+Updating 41e92d8..f3e3df3
+Fast-forward
+ scripts.js | 1 +
+ 1 file changed, 1 insertion(+)
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   scripts.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git add scripts.js 
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   scripts.js
+
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git commit -m "Archivo modificado"
+[master a1417cb] Archivo modificado
+ 1 file changed, 1 insertion(+)
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+nothing to commit, working tree clean
+zenyi@zenyi-VirtualBox:~/Desktop/git$ git push origin master
+Username for 'https://github.com': Zenyi1
+Password for 'https://Zenyi1@github.com': 
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+gTo https://github.com/Zenyi1/first_git.git
+   f3e3df3..a1417cb  master -> master
+izenyi@zenyi-VirtualBox:~/Desktop/git$ git status
+On branch master
+nothing to commit, working tree clean
+zenyi@zenyi-VirtualBox:~/Desktop/git$ 
+
